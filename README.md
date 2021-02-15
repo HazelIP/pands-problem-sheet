@@ -5,3 +5,5 @@
 # week 2 (involve input, format, )
 
 # week 3 (slicing string, index)
+
+# week 4 (have no clue for now)
