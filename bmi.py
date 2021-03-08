@@ -1,7 +1,7 @@
 # This program calculates BMI
 # Author: KA Ling Ip
 
-# Ask for user input
+# Ask for user input, as well as defining variables
 weight = int (input("Enter weight:"))
 height = int (input("Enter height:"))
 
