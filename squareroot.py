@@ -9,7 +9,6 @@ def main():
         print (sqrt(n))
     else:
         #prompt again if user input a negative number
-        n = float(input("Please enter a POSITIVE number: "))
         main()
 
 # newton method square root approximation, ref [6.1]
