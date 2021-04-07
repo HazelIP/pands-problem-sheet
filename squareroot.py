@@ -1,18 +1,26 @@
 # the program takes a positive floating point number as input
-# output an apporximation of its square root by newton method
-# create a function called "sqrt"
+# and output an apporximation of its square root by newton method
 # author: Ka Ling Ip
 
-inputNum= float(input("Please enter a postive number: ")) #ask user for an input
-precision = float (input("Please enter the precision, default 0.01"))
-def sqrt(n,p = 0.0): #takes 2 parameters, input and precision
-    n = inputNum #newton method, ref: 
-    p = precision
-    R = 1
-    for R > p: #sqrt precision, program stops when R<precision
-        R= (p + n/p)/2
-    
-    R = sqrt
-    return sqrt
+def main():
+    #ask user for an positive float point number
+    n = float(input("Please enter a positive number: ")) 
+    if n>0: #takes in only postive number
+        print (sqrt(n))
+    else:
+        #prompt again if user input a negative number
+        n = float(input("Please enter a POSITIVE number: "))
+        main()
 
-print (150,0.001)
+# newton method square root approximation, ref [6.1]
+def sqrt(n): #argument n = user input
+    p = 0.01 #precision
+    R = n #R is approximation of root
+    #program stops when n-(R^2)<precision
+    while abs(n-R**2)> p: 
+        R= (R + n/R)/2
+    return (R)
+
+main()
+
+# ref[6.1]: https://hackernoon.com/calculating-the-square-root-of-a-number-using-the-newton-raphson-method-a-how-to-guide-yr4e32zo
